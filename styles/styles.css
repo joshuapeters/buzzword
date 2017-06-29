@@ -8,3 +8,13 @@
     margin: 0 auto;
     text-align: center;
 }
+
+.bd-example {
+    border: solid #eee;
+    padding: 5rem;
+    margin-top: .5rem;
+    margin-right: 70rem;
+    margin-bottom: 0;
+    margin-left: 70rem;
+    border-width: .2rem
+}

@@ -24,7 +24,7 @@
 
 </head>
 <body>
-    <div class = "container">
+    <div >
         <div class="center jumbotron" id="buzzword_container">
             <h1>BUZZWORD.IO</h1>
             <!--header-text and buzzword-main are both loaded dynamically via buzzwords.js-->
@@ -34,6 +34,19 @@
     </div>
     <div class="center">
         <button onclick="reload()" type="button" class="btn btn-primary"><i class="icon-refresh icon-4x"></i></button>
+    </div>
+    <div class="center" style="padding-top: 2em" id="buzzword-form">
+        <h1>What buzzwords did we miss?</h1>
+        <h2>Let us know.</h2>
+        <form class="bd-example">
+            <div class="form-group">
+                <input type="text" class="form-control" id="fname" aria-describedby="fnameHelp" placeholder="Enter name (Buzz Word, Buzz W, etc.)">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="suggestionInput" aria-describedby="wordInputHelp" placeholder="Enter suggested words (Omnichannel, scalable, big data)">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
     <script type="text/javascript" src="js/buzzwords.js"></script>
