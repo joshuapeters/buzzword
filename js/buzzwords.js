@@ -14,6 +14,16 @@ function get_buzzword()
     return fix_ing_modifier(text);
 }
 
+function send_suggestion()
+{
+    var suggestion = document.getElementById("suggestionInput").value;
+    var name = document.getElementById("fname").value;
+    var subject = "Hey, " + name + " wants see these pop up on buzzword.io.";
+    var body = 'Here\'s what I want to see...' +
+        '\n ' + suggestion + '.';
+    window.open('mailto:jgpeters717+buzzwordsuggestions@gmail.com?subject=' + subject + '&body=' + body);
+}
+
 function get_title()
 {
     var my_trace = tracery.createGrammar(header_grammar);
