@@ -1,7 +1,7 @@
 export const header_grammar = {
   "origin": "#sentence#",
   "sentence" : [
-    "#buzzverb#ing your #buzznoun.s# so you don't have to."
+    "#buzzverb.capitalize#ing your #buzznoun.s# so you don't have to."
   ],
   "suffix": [
     "",

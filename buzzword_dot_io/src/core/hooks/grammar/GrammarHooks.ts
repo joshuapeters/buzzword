@@ -6,9 +6,7 @@ export function useGrammar() {
         const grammar = tracery.createGrammar(grammarConfiguration);
         grammar.addModifiers(tracery.baseEngModifiers);
 
-        return fixINGModifier(
-            capitalizeString(grammar.flatten(origin))
-        );
+        return fixINGModifier(grammar.flatten(origin));
     }
 
     return getNewGrammar;
@@ -17,9 +15,4 @@ export function useGrammar() {
 function fixINGModifier(text: string)
 {
     return text.replace("eing", "ing");
-}
-
-function capitalizeString(s: string)
-{
-    return s.charAt(0).toUpperCase() + s.slice(1);
 }
