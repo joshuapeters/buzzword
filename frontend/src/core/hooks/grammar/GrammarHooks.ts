@@ -9,7 +9,7 @@ export function useGrammar() {
         return fixINGModifier(grammar.flatten(origin));
     }
 
-    return getNewGrammar;
+    return { getNewGrammar };
 }
 
 function fixINGModifier(text: string)

@@ -6,9 +6,9 @@ import { BuzzwordHero }     from "../molecules/BuzzwordHero";
 import { useGrammar }       from "../core/hooks/grammar/GrammarHooks";
 
 export function BuzzwordPage() {
-    const getBuzzwordGrammar      = useGrammar();
-    const [header]                = useState(getBuzzwordGrammar(header_grammar));
-    const [buzzword, setBuzzword] = useState(getBuzzwordGrammar(buzzword_grammar));
+    const grammar                 = useGrammar();
+    const [header]                = useState(grammar.getNewGrammar(header_grammar));
+    const [buzzword, setBuzzword] = useState(grammar.getNewGrammar(buzzword_grammar));
 
     return (
         <div>
@@ -18,7 +18,7 @@ export function BuzzwordPage() {
                 paragraphText = { buzzword } />
             <div className = "center">
                 <IconButton
-                    onClick   = { () => setBuzzword(getBuzzwordGrammar(buzzword_grammar)) }
+                    onClick   = { () => setBuzzword(grammar.getNewGrammar(buzzword_grammar)) }
                     type      = "button"
                     class     = "btn btn-primary"
                     iconClass = "icon-refresh icon-4x"/>
