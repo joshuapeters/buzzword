@@ -1,0 +1,15 @@
+{
+  "short_name": "Buzzword.io",
+  "name": "Buzzword.io: The World's Most Synergistic Buzzword Generation Service",
+  "icons": [
+    {
+      "src": "Cloud_Computing-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
