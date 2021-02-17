@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BuzzwordPage } from "./pages/Buzzword-Page";
+import { BuzzwordHomePage } from "./pages/Buzzword-HomePage";
 
 function App() {
   return (
-    <BuzzwordPage />
+    <BuzzwordHomePage />
   );
 }
 
