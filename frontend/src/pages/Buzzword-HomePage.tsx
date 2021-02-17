@@ -1,6 +1,6 @@
-import React, { useState }  from "react";
+import React from "react";
 import './homepage.css';
-import logo from '../atoms/image/Logo.png';
+import logo                 from '../assets/images/Logo.png';
 import { Container }        from "react-bootstrap";
 import { Row }              from "react-bootstrap";
 import { Col }              from "react-bootstrap";
