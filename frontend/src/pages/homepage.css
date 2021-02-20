@@ -4,6 +4,7 @@ body,h1,h2,h3,h4,h5,p{
     font-family:'DM Sans', sans-serif;
     text-align:center;
 }
+
 .banner-top{
     background-color:#2044F4;
 }
@@ -16,24 +17,71 @@ body,h1,h2,h3,h4,h5,p{
     margin:7px 0;
 }
 
+.logo-container{
+    margin-top:25px;
+}
+
 .logo-container img{
     margin:0;
+    max-width:160px;
 }
 
-.main-content p{
-    text-align:center;
-    margin:25px auto 30px;
+.main-content .headline {
+    display:block;
+    margin:0 auto;
 }
 
-.main-content h1{
+.main-content .headline h1{
     font-size:40px;
     font-weight:bold;
     text-align:center;
     margin:236px auto 0;
 }
 
-
-.btn-outline-primary{
-    border-radius: 30px;
+.main-content .body-copy{
+    display:block;
     margin:0 auto;
+}
+
+.main-content .body-copy p{
+    text-align:center;
+    margin:25px auto 30px;
+}
+
+.main-content .btn-outline-primary{
+    display:block;
+    margin:0 auto;
+    border-color:#2044F4;
+    color:#2044F4;
+    border-radius: 30px;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px 35px;
+}
+
+.main-content .btn-outline-primary:hover{
+    color:white;
+    background-color:#2044F4;
+    border-color:#2044F4;
+}
+
+.footer{
+    height:50px;
+    font-size:11px;
+    margin:0 auto;
+}
+
+.footer a{
+    color: #2044F4;
+    text-decoration: underline;
+    vertical-align: middle;
+
+}
+
+.coffee-button{
+    max-width:120px;
+    position:inline-block;
+    text-align:right;
+    float:right;
+    vertical-align: middle;
 }
