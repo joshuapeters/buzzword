@@ -40,7 +40,7 @@ export function BuzzwordHomePage() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="body-copy" lg= {8} sm={12}>
+                    <Col className="body-copy" lg= {8} sm= {12}>
                         <p>Startup? 30-under-30-to-be? Use the button below to generate your next big mission statement that will make the world a better&nbsp;place.</p>
                     </Col>
                 </Row>
@@ -53,11 +53,14 @@ export function BuzzwordHomePage() {
                     </Col> 
                 </Row>
             </Container>
-            <Container className="footer">
-                <Row>
-                    <Col lg={6}>Created by 🦌 &nbsp;<a href="#" title="Soft Animal Design and Development" target="_blank">Soft Animal Design &amp; Development</a></Col>
-                    <Col><a href='https://ko-fi.com/P5P23CVN6' target='_blank'><img className="coffee-button" src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></Col>
-                </Row>
+            <Container fluid className="footer">
+                <Container>
+                    <Row>
+                        <Col className="soft-animal-link" md={6} sm={12}>
+                            <p>Created by 🦌 &nbsp;<a href="#" title="Soft Animal Design and Development" target="_blank">Soft Animal Design &amp; Development</a></p></Col>
+                        <Col md={6} sm={12}><a href='https://ko-fi.com/P5P23CVN6' target='_blank'><img className="coffee-button" src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></Col>
+                    </Row>
+                </Container>
             </Container>
         </div>
     );

@@ -2,7 +2,6 @@
 
 body,h1,h2,h3,h4,h5,p{
     font-family:'DM Sans', sans-serif;
-    text-align:center;
 }
 
 .banner-top{
@@ -22,7 +21,8 @@ body,h1,h2,h3,h4,h5,p{
 }
 
 .logo-container img{
-    margin:0;
+    display:block;
+    margin:0 auto;
     max-width:160px;
 }
 
@@ -32,10 +32,10 @@ body,h1,h2,h3,h4,h5,p{
 }
 
 .main-content .headline h1{
-    font-size:40px;
+    font-size:24px;
     font-weight:bold;
     text-align:center;
-    margin:236px auto 0;
+    margin:20px auto 0;
 }
 
 .main-content .body-copy{
@@ -68,20 +68,52 @@ body,h1,h2,h3,h4,h5,p{
 .footer{
     height:50px;
     font-size:11px;
-    margin:0 auto;
+    margin:0 auto 20px;
+    position:absolute;
+    bottom:0;
 }
 
-.footer a{
+.soft-animal-link{
+    vertical-align: middle;
+    text-align:center;
+}
+
+.soft-animal-link a{
     color: #2044F4;
     text-decoration: underline;
-    vertical-align: middle;
-
 }
 
 .coffee-button{
     max-width:120px;
-    position:inline-block;
-    text-align:right;
-    float:right;
+    display:block;
     vertical-align: middle;
+    float:none;
+    margin:0 auto;
+    text-align:center;
 }
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .main-content .headline h1{
+        font-size:40px;
+        margin:236px auto 0;
+    }
+
+    .coffee-button{
+        float:right;
+        margin:0;
+    } 
+
+    .soft-animal-link{
+        text-align:left;
+        margin-top:12px;
+    }
+
+    .logo-container img{
+        display:block;
+        margin:0;
+        max-width:160px;
+    }
+
+ }

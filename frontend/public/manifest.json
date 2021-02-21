@@ -3,10 +3,16 @@
   "name": "Buzzword.io: The World's Most Synergistic Buzzword Generation Service",
   "icons": [
     {
-      "src": "Cloud_Computing-512.png",
+      "src": "buzzword-icon.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
+    
   ],
   "start_url": ".",
   "display": "standalone",
