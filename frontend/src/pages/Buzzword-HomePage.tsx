@@ -1,22 +1,12 @@
-import React, { useState } from "react";
 import './homepage.css';
-
-import logo                 from '../assets/images/Logo.png';
-import { Container }        from "react-bootstrap";
-import { Row }              from "react-bootstrap";
-import { Col }              from "react-bootstrap";
-import { Button }           from "react-bootstrap";
-import { Image }            from "react-bootstrap";
-import { useGrammar } from "../core/hooks/grammar/GrammarHooks";
-import { header_grammar } from "../core/header_grammar";
-
-import { buzzword_grammar } from "../core/buzzword_grammar";
-
-import { Header }           from "../molecules/Header";
-import { Footer }           from "../molecules/Footer";
+import React            from "react";
+import { Header }       from "../molecules/Header";
+import { Footer }       from "../molecules/Footer";
+import { BuzzwordHero } from '../molecules/BuzzwordHero';
 
 
 export function BuzzwordHomePage() {
+<<<<<<< HEAD
     const grammar                 = useGrammar();
     const [header]                = useState(grammar.getNewGrammar(header_grammar));
     const [buzzword, setBuzzword] = useState(grammar.getNewGrammar(buzzword_grammar));
@@ -51,6 +41,13 @@ export function BuzzwordHomePage() {
 
             <Footer></Footer>
             
+=======
+        return (
+        <div className="buzzword-home">
+            <Header/>
+            <BuzzwordHero initialHeaderText="Welcome To The World's Most Synergistic Buzzword Generation Service" bodyText="Startup? 30-under-30-to-be? Use the button below to generate your next big mission statement that will make the world a better place."/>
+            <Footer/>
+>>>>>>> ad0c6bae4bbbf6c550c1cd9068144d8efaf16f4b
         </div>
     );
 
