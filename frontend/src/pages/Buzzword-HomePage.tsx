@@ -28,9 +28,10 @@ export function BuzzwordHomePage() {
             <Header></Header>
             
             <Container className="main-content">
-                <Row>
-                    <Col className="headline" lg= {10} sm= {12}>
-                        <h1>{ buzzword }</h1>
+                <Row className="">
+                    <Col className="headline blue-border" lg= {10} sm= {12}>
+                        <h1 className="buzzphrase">{ buzzword }</h1>
+                        <i className="icon-link"></i>
                     </Col>
                 </Row>
                 <Row>
