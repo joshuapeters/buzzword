@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { IconButton }                  from "../atoms/button/IconButton";
 import { useGrammar }                  from "../core/hooks/grammar/GrammarHooks";
 import { buzzword_grammar }            from "../core/buzzword_grammar";
+import { AnalyticsService } from "../core/services/analytics/AnalyticsService";
 
 interface BuzzwordHeroProps {
     initialHeaderText: string;
@@ -30,6 +31,8 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
                 isFirstClick: isFirstClick
             });
         }
+
+        AnalyticsService.PostClickCount();
     }
 
 
