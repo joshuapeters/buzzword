@@ -1,5 +1,5 @@
 import React, { useState }                from "react";
-import '../pages/homepage.css';
+import '../pages/homepage.scss';
 import CountUp from 'react-countup';
 import { Container }        from "react-bootstrap";
 import { Row }              from "react-bootstrap";
@@ -35,7 +35,7 @@ export function Footer() {
                     }
             
                     {/* <p>Created by 🦌 &nbsp;<a href="#" title="Soft Animal Design and Development" target="_blank">Soft Animal Design &amp; Development</a></p></Col> */}
-                    <Col md={3} sm={12}><a href='https://ko-fi.com/P5P23CVN6' target='_blank'><img className="coffee-button" src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></Col>
+                    <Col md={3} sm={12}><a href='https://ko-fi.com/P5P23CVN6' target='_blank' rel="noreferrer"><img className="coffee-button" src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></Col>
                 </Row>
             </Container>
         </Container>
