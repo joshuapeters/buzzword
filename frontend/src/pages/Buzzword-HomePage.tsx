@@ -1,8 +1,8 @@
-import './homepage.css';
-import React                from "react";
-import { Header }           from "../molecules/Header";
-import { Footer }           from "../molecules/Footer";
-import { BuzzwordHero }     from '../molecules/BuzzwordHero';
+import './homepage.scss';
+import React            from "react";
+import { Header }       from "../molecules/Header";
+import { Footer }       from "../molecules/Footer";
+import { BuzzwordHero } from '../molecules/BuzzwordHero';
 
 
 export function BuzzwordHomePage() {
