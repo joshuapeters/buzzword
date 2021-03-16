@@ -1,5 +1,5 @@
 import React                from "react";
-import '../pages/homepage.scss';
+import '../pages/homepage.css';
 
 import { Container }        from "react-bootstrap";
 import { Row }              from "react-bootstrap";

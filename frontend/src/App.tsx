@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import './App.css';
 import { BuzzwordHomePage } from "./pages/Buzzword-HomePage";
 
 function App() {

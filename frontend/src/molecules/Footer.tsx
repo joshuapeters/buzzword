@@ -1,5 +1,5 @@
 import React, { useState }                from "react";
-import '../pages/homepage.scss';
+import '../pages/homepage.css';
 import CountUp from 'react-countup';
 import { Container }        from "react-bootstrap";
 import { Row }              from "react-bootstrap";
