@@ -1,5 +1,4 @@
-import tracery      from "tracery-grammar";
-import { useState } from "react";
+import tracery from "tracery-grammar";
 
 export function useGrammar() {
     function getNewGrammar(grammarConfiguration: object, origin: string = "#origin#") {

@@ -15,7 +15,10 @@ export const buzzword_grammar = {
     "dynamically",
     "ethically",
     "reliably",
-    "deeply"
+    "deeply",
+    "profoundly",
+    "expediently",
+    "bigly"
   ],
   "buzzjective": [
     "seamless",
@@ -47,7 +50,8 @@ export const buzzword_grammar = {
     "best-in-class",
     "legacy",
     "non-linear",
-    "concurrent"
+    "concurrent",
+    "agile"
   ],
   "buzzverb": [
     "engineer",
@@ -61,7 +65,8 @@ export const buzzword_grammar = {
     "spin-up",
     "touch-base",
     "datafy",
-    "expect"
+    "expect",
+    "starburst"
   ],
   "buzznoun": [
     "crypto-currency",
@@ -95,7 +100,7 @@ export const buzzword_grammar = {
     "information super-highway",
     "world wide web",
     "hyperlink",
-    "development lifecycle"
+    "development lifecycle",
   ],
     "buzznoun-plural": [
         "crypto-currencies",
