@@ -1,26 +1,7 @@
+import { ApolloUtils } from './core/utils/ApolloUtils';
 import { ApolloServer, gql } from 'apollo-server';
-// 1
-const typeDefs = `
-  type Query {
-    info: String!
-  }
-`
+import { schema } from './schema';
 
-// 2
-const resolvers = {
-  Query: {
-    info: () => `This is the API of a Hackernews Clone`
-  }
-}
-
-// 3
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-})
-
-server
+ApolloUtils.InitializeServer()
   .listen()
-  .then(({ url }) =>
-    console.log(`Server is running on ${url}`)
-  );
+  .then(({ url }) => console.log(`Server is running on ${url}`));
