@@ -49,6 +49,12 @@ body,h1,h2,h3,h4,h5,p{
     margin-top:20px;
 }
 
+.highlight{
+    background: #C7F9FC;
+    background: linear-gradient(360deg, #C7F9FC 30%, rgba(0,212,255,0) 30%);
+}
+
+
 .main-content .buzzphrase{
     border:4px solid #2044F4;
     border-radius:10px;
