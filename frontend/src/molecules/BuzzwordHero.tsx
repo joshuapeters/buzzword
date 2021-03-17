@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { IconButton } from '../atoms/button/IconButton';
-import { useGrammar } from '../core/hooks/grammar/GrammarHooks';
-import { buzzword_grammar } from '../core/buzzword_grammar';
-import { AnalyticsService } from '../core/services/analytics/AnalyticsService';
-import { LastLine } from '../vendor/lastLine';
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { IconButton } from "../atoms/button/IconButton";
+import { useGrammar } from "../core/hooks/grammar/GrammarHooks";
+import { buzzword_grammar } from "../core/buzzword_grammar";
+import { AnalyticsService } from "../core/services/analytics/AnalyticsService";
+import { LastLine } from "../vendor/lastLine";
 
 interface BuzzwordHeroProps {
   initialHeaderText: string;
@@ -23,8 +23,25 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
   const [isFirstClick, setIsFirstClick] = useState(true);
 
   useEffect(() => {
-    LastLine.applyStyles();
-  }, []);
+    if (isFirstClick) {
+      LastLine.applyStyles();
+      _addResizeListener();
+    } else {
+      _removeListener();
+    }
+  }, [isFirstClick]);
+
+  function _addResizeListener() {
+    window.addEventListener("resize", () => {
+      LastLine.applyStyles();
+    });
+  }
+
+  function _removeListener() {
+    window.removeEventListener("resize", () => {
+      LastLine.applyStyles();
+    });
+  }
 
   function _handleBuzzwordClick() {
     setBuzzword(grammar.getNewGrammar(buzzword_grammar));
@@ -41,30 +58,33 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
   }
 
   return (
-    <Container className="main-content">
+    <Container className='main-content'>
       <Row>
-        <Col className="headline" lg={10} sm={12}>
-          <h1 className="last-line">{buzzword}</h1>
+        <Col className='headline' lg={10} sm={12}>
+          <h1 className={isFirstClick ? "last-line" : ""}>{buzzword}</h1>
         </Col>
       </Row>
       <Row>
-        <Col className="body-copy" lg={8} sm={12}>
+        <Col className='body-copy' lg={8} sm={12}>
           <p>{props.bodyText}</p>
         </Col>
       </Row>
       <Row>
         <Col>
           {isFirstClick ? (
-            <Button onClick={_handleBuzzwordClick} size="lg" variant="outline-primary">
+            <Button
+              onClick={_handleBuzzwordClick}
+              size='lg'
+              variant='outline-primary'>
               Buzz It!
             </Button>
           ) : (
             <IconButton
-              buttonText="Get another!"
+              buttonText='Get another!'
               onClick={_handleBuzzwordClick}
-              type="button"
-              class="btn-outline-primary"
-              iconClass="icon-refresh icon"
+              type='button'
+              class='btn-outline-primary'
+              iconClass='icon-refresh icon'
             />
           )}
         </Col>

@@ -1,12 +1,16 @@
 const applyStyles = () => {
-  const elements = document.querySelectorAll('.last-line');
-  const nameElement = 'last-line-element';
-  const nameRow = 'last-line-row';
+  const elements = document.querySelectorAll(".last-line");
+  const nameElement = "last-line-element";
+  const nameRow = "last-line-row";
 
   const wrapAll = (nodes, wrapper, elem) => {
     const parent = nodes[0].parentNode;
     const { previousSibling } = nodes[0];
-    for (let i = 0; nodes.length - i; wrapper.firstChild === nodes[0] && (i += 1)) {
+    for (
+      let i = 0;
+      nodes.length - i;
+      wrapper.firstChild === nodes[0] && (i += 1)
+    ) {
       wrapper.appendChild(nodes[i]);
     }
     if (previousSibling) {
@@ -19,15 +23,15 @@ const applyStyles = () => {
 
   const findLastRow = (elem) => {
     const content = elem.innerText.trim();
-    const contentArr = content.split(' ');
-    let contentFormatted = '';
+    const contentArr = content.split(" ");
+    let contentFormatted = "";
     contentArr.forEach((item) => {
       contentFormatted += `<span>${item} </span>`;
     });
     const element = elem;
     element.innerHTML = contentFormatted;
 
-    const childrenSpan = Array.from(elem.getElementsByTagName('span'));
+    const childrenSpan = Array.from(elem.getElementsByTagName("span"));
     let top = 0;
     childrenSpan.forEach((item) => {
       const thisTop = item.offsetTop;
@@ -43,7 +47,7 @@ const applyStyles = () => {
     });
 
     const wrapElements = element.querySelectorAll(`.${nameElement}`);
-    const wrapper = document.createElement('span');
+    const wrapper = document.createElement("span");
     wrapper.classList.add(nameRow);
     wrapAll(wrapElements, wrapper, elem);
   };
@@ -54,9 +58,6 @@ const applyStyles = () => {
     });
   };
 
-  window.addEventListener('resize', () => {
-    findLastRows();
-  });
   findLastRows();
 };
 
