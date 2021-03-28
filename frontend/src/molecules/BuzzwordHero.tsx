@@ -46,7 +46,8 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
 
 
     return (
-        <Container className="main-content">
+        <div className="container-position">
+            <Container className="main-content">
                 <Row>
                     <Col className="headline" lg = {10} sm = {12}>
                         <h1 className= { isFirstClick ? "" : "buzzphrase" }>{ buzzword }</h1>
@@ -80,5 +81,6 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
                     </Col> 
                 </Row>
             </Container>
+        </div>
     );
 }

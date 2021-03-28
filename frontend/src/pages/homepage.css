@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
+html, body, #root {
+    height:100%;
+}
+
+.buzzword-home{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:stretch;
+    height:100%;
+}
+
 body,h1,h2,h3,h4,h5,p{
     font-family:'DM Sans', sans-serif;
 }
@@ -104,12 +116,10 @@ body,h1,h2,h3,h4,h5,p{
 }
 
 /* Footer */
+
 .footer{
-    height:50px;
     font-size:11px;
-    margin:0 auto 20px;
-    position:absolute;
-    bottom:0;
+    margin:50px auto 10px;
 }
 
 .soft-animal-link{
@@ -134,12 +144,22 @@ body,h1,h2,h3,h4,h5,p{
 
 /**** Medium devices (tablets, 768px and up) ****/
 @media (min-width: 768px) { 
-    .main-content .headline{
-        margin:236px auto 0;
+
+    html, body, #root {
+        height:100%;
     }
+
+    .btn-outline-primary{
+        margin-bottom:20px;
+    }
+
     .main-content h1{
         font-size:40px;
         margin-top:0;
+    }
+
+    .headline{
+        margin:0 auto;
     }
 
     .main-content .buzzphrase{
