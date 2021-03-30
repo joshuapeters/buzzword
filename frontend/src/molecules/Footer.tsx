@@ -23,21 +23,24 @@ export function Footer() {
     }
 
     return (
-        <Container fluid className="footer">
-            <Container>
-                <Row>
-                    <Col className="soft-animal-link" md={5} sm={12}>
-                        <p>Created by 🦌 Soft Animal Design and Development</p>
-                    </Col>
+        <div className="container-position">
+            <Container fluid className="footer">
+                <Container>
+                    <Row>
+                        <Col className="soft-animal-link" md={5} sm={12}>
+                            <p>Created by 🦌 Soft Animal Design and Development</p>
+                        </Col>
 
-                    {
-                        getCounter()
-                    }
-            
-                    {/* <p>Created by 🦌 &nbsp;<a href="#" title="Soft Animal Design and Development" target="_blank">Soft Animal Design &amp; Development</a></p></Col> */}
-                    <Col md={3} sm={12}><a href='https://ko-fi.com/P5P23CVN6' target='_blank' rel="noreferrer"><img className="coffee-button" src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></Col>
-                </Row>
+                        {
+                            getCounter()
+                        }
+                
+                        {/* <p>Created by 🦌 &nbsp;<a href="#" title="Soft Animal Design and Development" target="_blank">Soft Animal Design &amp; Development</a></p></Col> */}
+                        <Col md={3} sm={12}><a href='https://ko-fi.com/P5P23CVN6' target='_blank' rel="noreferrer"><img className="coffee-button" src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></Col>
+                    </Row>
+                </Container>
             </Container>
-        </Container>
+        </div>
+        
     );
 }

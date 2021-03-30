@@ -5,6 +5,7 @@ import { useGrammar } from "../core/hooks/grammar/GrammarHooks";
 import { buzzword_grammar } from "../core/buzzword_grammar";
 import { AnalyticsService } from "../core/services/analytics/AnalyticsService";
 import { LastLine } from "../vendor/lastLine";
+import copy from "copy-to-clipboard";
 
 interface BuzzwordHeroProps {
   initialHeaderText: string;
@@ -21,6 +22,7 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
   const grammar = useGrammar();
   const [buzzword, setBuzzword] = useState(props.initialHeaderText);
   const [isFirstClick, setIsFirstClick] = useState(true);
+  const [isCopied, setCopied] = useState(false);
 
   useEffect(() => {
     if (isFirstClick) {
@@ -46,6 +48,7 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
   function _handleBuzzwordClick() {
     setBuzzword(grammar.getNewGrammar(buzzword_grammar));
     setIsFirstClick(false);
+    setCopied(false);
 
     if (props.onBuzzwordChange) {
       props.onBuzzwordChange({
@@ -57,11 +60,23 @@ export function BuzzwordHero(props: BuzzwordHeroProps) {
     AnalyticsService.PostClickCount();
   }
 
+  function _copyToClipboard() {
+    setCopied(false);
+    copy(buzzword);
+    setCopied(true);
+  }
+
   return (
     <Container className='main-content'>
       <Row>
         <Col className='headline' lg={10} sm={12}>
-          <h1 className={isFirstClick ? "last-line" : ""}>{buzzword}</h1>
+          <h1 className={isFirstClick ? "last-line" : "buzzphrase"}>
+            {buzzword}
+          </h1>
+          {isFirstClick ? null : (
+            <a className='icon-link' onClick={_copyToClipboard}></a>
+          )}
+          {isCopied ? <p className='copy-confirmation'>Copied!</p> : null}
         </Col>
       </Row>
       <Row>

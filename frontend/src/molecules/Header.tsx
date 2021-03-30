@@ -12,20 +12,23 @@ import logo                 from '../assets/images/Logo.png';
 export function Header() {
     return (
         <React.Fragment>
-            <Container fluid className="banner-top">
-                <Row>
-                    <Col>
-                        <p>Coming Soon To Product Hunt 🚀</p>
-                    </Col>
-                </Row>
-            </Container>
-            <Container className="logo-container">
-                <Row>
-                    <Col>
-                        <Image src={ logo } />
-                    </Col>
-                </Row>
-            </Container>
+            <div className="header container-position">
+                <Container fluid className="banner-top">
+                    <Row>
+                        <Col>
+                            <p>Coming Soon To Product Hunt 🚀</p>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container className="logo-container">
+                    <Row>
+                        <Col>
+                            <Image src={ logo } />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            
         </React.Fragment>   
     );
 }
